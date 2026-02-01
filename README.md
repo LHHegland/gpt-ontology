@@ -1,8 +1,10 @@
-# [insert domain name]
+# gpt-ontology
 
-**NAMESPACE:** me.hegland-lance.chatgpt.[insert domain name]
+**NAMESPACE:** me.hegland-lance.gpt.ontology
 
-**PURPOSE:** [insert domain name] domain knowledge files for GPT prompts.
+**PURPOSE:** A lightweight, LLM-legible semantic scaffolding system for organizing knowledge files that guide AI tools (such as custom GPTs and ChatGPT) toward accurate, relevant, specific, clear, practical, fair, and efficient responses.
+
+It prioritizes human-readable structure, stable identifiers, and explicit decision guidance over formal ontology rigor, enabling consistent reasoning and behavior across AI-assisted workflows.
 
 .
 
@@ -29,8 +31,13 @@ TODO
 
 ## **Background**
 
-TODO
-
+My goal is to build LLM-legible semantic scaffolding; not to build OWL-perfect ontologies. The scaffolding must help guide tools so the tools are able to offer accurate, relevant, specific, clear, practical, fair, and efficient results for users. Processing must prioritize accuracy, relevance, specificity, clarity, practicality, fairness, and efficiency, in that order. The scaffolding must help organize knowledge files for use by LLM tools. ChatGPT recommended the following scaffolding:
+- **ontology**: the root for *everything* the AI treats as “semantic constitution”: canonical definitions, relationships, and behavior guidance.
+  - **meta**: “about the ontology itself” and other *cross-cutting scaffolding* that applies everywhere (i.e., rules about rules). Put knowledge files here if it’s a naming rule, modeling convention, global decision policy, glossary of meta-terms, ontology versioning, or core primitives reused across domains.
+  - **domains**: subject-matter “topic areas” (the *what*). Put knowledge files here if it’s a field/area of knowledge to browse, learn, or answer questions about.
+  - **roles**: actors, personas, stakeholder types, or viewpoints (the *who*). Put knowledge files here if it describes an agent that performs work, has responsibilities, or provides a perspective.
+  - **capabilities**: skills/functions/competencies that roles (or systems) can do (the *how*). Put knowledge files here if it’s something to *perform*, *assess*, *improve*, or *request* as a behavior.
+  - **values**: norms, priorities, constraints, and evaluation criteria (the *why / should*). Put knowledge files here if it expresses what “good” looks like, what to optimize for, or what to avoid.
 
 .
 
