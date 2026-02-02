@@ -37,6 +37,37 @@ This file covers:
 - **Governance and safety checks:** Invoke governance/compliance/security lenses for policy alignment and risk spotting.
 - **Reusable team presets:** Define standardized expert sets for an organization’s common workflows (docs review, model eval, research synthesis).
 
+## Tag Policy (Canonical vs Alias Rules)
+
+### Canonical Tags
+- **Format:** `[[GPT:<NAME>]]` (namespaced, all-caps preferred for stability).
+  - Example: `[[GPT:EXPERTS]]`, `[[GPT:KNOWLEDGE_EXPERTS]]`
+- **Purpose:** The canonical tag is the *primary* reference used in prompts, docs, and cross-file linking.
+- **Uniqueness:** One canonical tag per definition. Canonical tags must be globally unique within the knowledge set.
+- **Stability:** Canonical tags are treated as stable API-like identifiers and should almost never change once published.
+- **Display Name Alignment:** Canonical tag name should match the definition title closely (avoid synonyms unless the canonical form is already established).
+
+### Alias Tags
+- **Format:** `[[<ALIAS>]]` (shorter/legacy-friendly; may use underscores), e.g. `[[GPT_EXPERTS]]`
+- **Purpose:** Provide backwards compatibility and capture common alternate spellings.
+- **Limits:** Prefer **0–3 aliases** per definition. Fewer is better.
+- **Non-authoritative:** Aliases should never introduce new meaning; they must be strict synonyms of the canonical tag.
+- **Deprecation:** If an alias is being phased out, keep it listed but mark it:
+  - Example: `Aliases (deprecated): [[OLD_TAG]]` + add a note “Use [[GPT:EXPERTS]] instead.”
+
+### Naming Conventions
+- **Case:** Prefer uppercase for the canonical `<NAME>` segment (e.g., `EXPERTS`, `KNOWLEDGE_EXPERTS`) for readability and to avoid drift.
+- **Separators:** Prefer underscores in multiword names (`KNOWLEDGE_EXPERTS`), avoid spaces.
+- **Avoid collisions:** Do not create tags that are easy to confuse (e.g., `[[GPT:KNOWLEDGE]]` vs `[[GPT:KNOWLEDGE_EXPERTS]]`) unless there’s a clear hierarchy.
+
+### Governance Rules
+- **Adding a new tag requires:**
+  - a unique `ID`,
+  - exactly one canonical tag,
+  - a short definition,
+  - index entry mapping a human label → canonical tag.
+- **Changing canonical tags:** Only if absolutely necessary; when changed, keep the old canonical as an alias (deprecated) and update the Index.
+
 # Relevant Context
 
 ## Index
