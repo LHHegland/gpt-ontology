@@ -68,6 +68,89 @@ This file covers:
   - index entry mapping a human label → canonical tag.
 - **Changing canonical tags:** Only if absolutely necessary; when changed, keep the old canonical as an alias (deprecated) and update the Index.
 
+## Definition Schema
+
+Use this schema for every definition entry to keep IDs/tags consistent, enable composability, and reduce drift.
+
+### Required Fields
+- **Title:** Human-readable label for the definition.
+- **ID:** Stable identifier (dot-delimited).  
+  - Example: `GPT.EXPERTS`, `GPT.EXPERTS.KNOWLEDGE`
+- **Canonical Tag:** Namespaced tag used as the primary reference in prompts.  
+  - Format: `[[GPT:<NAME>]]`
+- **Aliases:** Optional synonym tags for compatibility and common variants (0–3 preferred).  
+  - Example: `[[GPT_EXPERTS]]`
+- **Summary:** 1–3 sentences describing what this definition invokes and when to use it.
+
+### Content Fields
+- **Included Lenses / Roles:** Structured bullet list of included expert lenses/roles (grouped where helpful).
+- **Best For (Use Cases):** 3–6 bullets describing recommended uses.
+- **Not For (Anti-Use Cases):** 2–5 bullets describing misuse or non-goals.
+- **Inputs Expected:** What the user should provide for high-quality output.
+- **Outputs (Default Deliverables):** What the assistant should produce by default when invoked.
+- **Quality Bar / Evaluation Criteria:** What “good” looks like (measurable or checkable criteria).
+- **Safety / Compliance Notes:** Any constraints or special handling, including avoiding credential claims.
+
+### Relationship / Composition Fields
+- **Requires:** Tags that must also be invoked (or `None`).
+- **Compatible With:** Tags that pair well (or `None`).
+- **Conflicts With:** Tags that should not be combined (or `None`).
+- **Overlaps With:** Tags with partial overlap (warn to avoid redundancy) (or `None`).
+- **Supersedes:** Prior tags/definitions this replaces (or `None`).
+- **Superseded By:** Replacement tag if this is deprecated (or `None`).
+
+### Examples
+- **Examples:** 1–3 short prompt examples showing correct invocation and composition.
+
+### Copy/Paste Template
+
+#### <Title>
+ID: <ID>  
+Canonical Tag: [[GPT:<NAME>]]  
+Aliases: [[<ALIAS_1>]] [[<ALIAS_2>]] (optional)
+
+Summary:
+- <1–3 sentences>
+
+Included Lenses / Roles:
+- <group>
+  - <role>
+  - <role>
+
+Requires: <tags or None>  
+Compatible With: <tags or None>  
+Conflicts With: <tags or None>  
+Overlaps With: <tags or None>  
+Supersedes: <tags or None>  
+Superseded By: <tags or None>
+
+Best For (Use Cases):
+- <bullet>
+- <bullet>
+
+Not For (Anti-Use Cases):
+- <bullet>
+- <bullet>
+
+Inputs Expected:
+- <bullet>
+- <bullet>
+
+Outputs (Default Deliverables):
+- <bullet>
+- <bullet>
+
+Quality Bar / Evaluation Criteria:
+- <bullet>
+- <bullet>
+
+Safety / Compliance Notes:
+- <bullet or None>
+
+Examples:
+- "<prompt example 1>"
+- "<prompt example 2>"
+
 # Relevant Context
 
 ## Index
@@ -175,6 +258,10 @@ Experts that most comprehensively and most frequently study, analyze, evaluate, 
 * “Use [[GPT:EXPERTS]] to evaluate this custom GPT’s instructions and propose improvements for clarity, safety, and usability.”
 * “Act as [[GPT:EXPERTS]] and provide a multi-lens critique of these prompt results, including evaluation suggestions.”
 
+**Changelog:** None
+**Owner:** Lance Hegland (lance.hegland@gmail.com)
+**Last reviewed:** 2026-02-02 06:02 UTC by Lance Hegland
+
 
 ## Knowledge Experts
 
@@ -244,3 +331,7 @@ Experts that most comprehensively and most frequently study, analyze, evaluate, 
 
 * “Use [[GPT:EXPERTS]] + [[GPT:KNOWLEDGE_EXPERTS]] to evaluate this knowledge file and rewrite the header, index, and definitions for better retrieval.”
 * “As [[GPT:EXPERTS]] + [[GPT:KNOWLEDGE_EXPERTS]], propose a tag policy and a contributor checklist for this knowledge set.”
+
+**Changelog:** None
+**Owner:** Lance Hegland (lance.hegland@gmail.com)
+**Last reviewed:** 2026-02-02 06:02 UTC by Lance Hegland
