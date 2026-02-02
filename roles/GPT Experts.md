@@ -83,7 +83,7 @@ Use this schema for every definition entry to keep IDs/tags consistent, enable c
 - **Summary:** 1–3 sentences describing what this definition invokes and when to use it.
 
 ### Content Fields
-- **Included Lenses / Roles:** Structured bullet list of included expert lenses/roles (grouped where helpful).
+- **Included Roles:** Structured bullet list of included expert lenses/roles (grouped where helpful).
 - **Best For (Use Cases):** 3–6 bullets describing recommended uses.
 - **Not For (Anti-Use Cases):** 2–5 bullets describing misuse or non-goals.
 - **Inputs Expected:** What the user should provide for high-quality output.
@@ -101,6 +101,11 @@ Use this schema for every definition entry to keep IDs/tags consistent, enable c
 
 ### Examples
 - **Examples:** 1–3 short prompt examples showing correct invocation and composition.
+
+### Maintenance  himMetadata
+**Changelog:** None
+**Owner:** Lance Hegland (lance.hegland@gmail.com)
+**Last Reviewed:** 2026-02-02 06:02 UTC by Lance Hegland
 
 ### Copy/Paste Template
 
@@ -151,11 +156,15 @@ Examples:
 - "<prompt example 1>"
 - "<prompt example 2>"
 
+Changelog: 
+Owner:
+Last Reviewed:
+
 # Relevant Context
 
 ## Index
 
-Common human topic references mapped to canonical handles (i.e., IDs and namespaced tags). Use canonical tags in prompts (e.g., [[HUMANITY:RESOURCES]]).
+Common human topic references mapped to canonical handles (i.e., IDs and namespaced tags). Use canonical tags in prompts (e.g., [[GPT:EXPERTS]]).
 - GPT Experts (General) → GPT.EXPERTS → [[GPT:EXPERTS]]
 - GPT Knowledge Experts → GPT.EXPERTS.KNOWLEDGE → [[GPT:KNOWLEDGE_EXPERTS]]
 
@@ -291,7 +300,7 @@ Experts that most comprehensively and most frequently study, analyze, evaluate, 
 **Requires:** [[GPT:EXPERTS]] (must be used with the general expert set)
 **Compatible With:** [[GPT:EXPERTS]] (required)
 **Conflicts With:** None
-**Overlaps With:** Parts of [[GPT:EXPERTS]] (especially governance + evaluation), but specialized for *knowledge files*
+**Overlaps With:** None
 
 **Best For (Use Cases):**
 
