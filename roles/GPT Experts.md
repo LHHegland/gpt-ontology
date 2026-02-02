@@ -1,28 +1,49 @@
 # File Header
 
-- **Name**: GPT Experts 
-- **Version**: 2026-02-01 18:33 UTC by LHH
-- **Purpose**: TBD 
-- **Features**
-  - TBD
-- **Scope**
-  - TBD
-- **Use Cases**
-  - **Supported**
-    - TBD
-  - **Not Supported**
-    - TBD
+## Version
+2026-02-01 18:33 UTC
 
+## Author
+Lance Hegland (lance.hegland@gmail.com)
+
+## Purpose
+Define a reusable “expert-team” taxonomy (e.g., [[GPT:EXPERTS]], [[GPT:KNOWLEDGE_EXPERTS]]) that can be invoked in prompts to:
+- Select the right expert lenses for a task (review, critique, planning, synthesis).
+- Standardize names, IDs, and tags so prompts stay consistent across chats and GPTs.
+- Reduce ambiguity by mapping plain-language labels (“Data Scientist”) to stable, canonical handles.
+
+## Features
+- **Stable identifiers:** Each expert grouping has an `ID` for durable referencing.
+- **Canonical tags + aliases:** Each grouping includes `TAGS` (namespaced + optional aliases) for easy prompt invocation.
+- **Index for discoverability:** Human-friendly names map to IDs/tags for quick lookup.
+- **Composable expert sets:** Supports combining expert groups (e.g., [[GPT:EXPERTS]] + [[GPT:KNOWLEDGE_EXPERTS]]) with relationship rules (e.g., “Requires”).
+- **Maintenance-friendly structure:** Clear sections (Context → Index → Definitions) for scalable additions.
+
+## Scope
+This file covers:
+- Expert *roles/lenses* used to evaluate or produce work in ChatGPT/custom GPT contexts.
+- Definitions of expert groupings (general and specialized) and how they relate (subset/requirement relationships).
+- Naming conventions via IDs and tags for prompt reliability.
+
+## Out of Scope
+- Verifying real-world credentials, licensing, or identity of experts.
+- Hiring guidance, HR policy, or legal/medical/professional advice beyond “review lens” framing.
+- Detailed methodologies or step-by-step playbooks for each domain (those belong in separate knowledge files).
+
+## Use Cases
+- **Prompting consistency:** “Use [[GPT:EXPERTS]] to evaluate this spec for risks, clarity, and completeness.”
+- **Role-based reviews:** Generate multi-lens critiques (product, data, compliance, UX research, etc.) using a consistent roster.
+- **Knowledge-file evaluation:** Use [[GPT:KNOWLEDGE_EXPERTS]] to assess knowledge-file structure, retrieval ergonomics, and maintenance quality.
+- **Governance and safety checks:** Invoke governance/compliance/security lenses for policy alignment and risk spotting.
+- **Reusable team presets:** Define standardized expert sets for an organization’s common workflows (docs review, model eval, research synthesis).
 
 # Relevant Context
-
 
 ## Index
 
 Common human topic references mapped to canonical handles (i.e., IDs and namespaced tags). Use canonical tags in prompts (e.g., [[HUMANITY:RESOURCES]]).
 - GPT Experts (General) → GPT.EXPERTS → [[GPT:EXPERTS]]
 - GPT Knowledge Experts → GPT.EXPERTS.KNOWLEDGE → [[GPT:KNOWLEDGE_EXPERTS]]
-
 
 ## GPT
 
@@ -69,7 +90,6 @@ Experts that most comprehensively and most frequently study, analyze, evaluate, 
   - Human-Computer Interaction Researchers
   - UX Researchers
   - Cognitive Scientists
-
 
 #### Knowledge Experts
 
