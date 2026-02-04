@@ -74,11 +74,11 @@ Use this schema for every definition entry to keep IDs/tags consistent, enable c
 
 ### Required Fields
 - **Title:** Human-readable label for the definition.
-- **ID:** Stable identifier (dot-delimited).  
+- **ID:** Stable identifier (dot-delimited).
   - Example: `GPT.EXPERTS`, `GPT.EXPERTS.KNOWLEDGE`
-- **Canonical Tag:** Namespaced tag used as the primary reference in prompts.  
+- **Canonical Tag:** Namespaced tag used as the primary reference in prompts.
   - Format: `[[GPT:<NAME>]]`
-- **Aliases:** Optional synonym tags for compatibility and common variants (0–3 preferred).  
+- **Aliases:** Optional synonym tags for compatibility and common variants (0–3 preferred).
   - Example: `[[GPT_EXPERTS]]`
 - **Summary:** 1–3 sentences describing what this definition invokes and when to use it.
 
@@ -102,63 +102,67 @@ Use this schema for every definition entry to keep IDs/tags consistent, enable c
 ### Examples
 - **Examples:** 1–3 short prompt examples showing correct invocation and composition.
 
-### Maintenance  himMetadata
-**Changelog:** None
-**Owner:** Lance Hegland (lance.hegland@gmail.com)
-**Last Reviewed:** 2026-02-02 06:02 UTC by Lance Hegland
+### Maintenance Metadata
+- **Owner:** Identity and contact information for person responsible for element.
+- **Last Reviewed:** UTC timestamp plus identity and contact information for reviewer.
+- **Changelog:** List of UTC timestamps, identity and contact information for editor, plus description of changes.
 
 ### Copy/Paste Template
 
 #### <Title>
-ID: <ID>  
-Canonical Tag: [[GPT:<NAME>]]  
-Aliases: [[<ALIAS_1>]] [[<ALIAS_2>]] (optional)
+**ID:** <ID>
+**Tag:** [[GPT:<NAME>]]
+**Aliases:** [[<ALIAS_1>]] [[<ALIAS_2>]] (optional)
 
-Summary:
-- <1–3 sentences>
+**Summary:** <1–3 sentences>
 
-Included Lenses / Roles:
+**Included Roles:**
 - <group>
   - <role>
   - <role>
 
-Requires: <tags or None>  
-Compatible With: <tags or None>  
-Conflicts With: <tags or None>  
-Overlaps With: <tags or None>  
-Supersedes: <tags or None>  
-Superseded By: <tags or None>
+**Requires:** <tags or None>
+**Compatible With:** <tags or None>
+**Conflicts With:** <tags or None>
+**Overlaps With:** <tags or None>
+**Supersedes:** <tags or None>
+**Superseded By:** <tags or None>
 
-Best For (Use Cases):
-- <bullet>
-- <bullet>
-
-Not For (Anti-Use Cases):
+**Best For (Use Cases):**
 - <bullet>
 - <bullet>
 
-Inputs Expected:
+**Not For (Anti-Use Cases):**
 - <bullet>
 - <bullet>
 
-Outputs (Default Deliverables):
+**Inputs Expected:**
 - <bullet>
 - <bullet>
 
-Quality Bar / Evaluation Criteria:
+**Outputs (Default Deliverables):**
 - <bullet>
 - <bullet>
 
-Safety / Compliance Notes:
+**Quality Bar / Evaluation Criteria:**
+- <bullet>
+- <bullet>
+
+**Safety / Compliance Notes:**
 - <bullet or None>
 
-Examples:
+**Examples:**
 - "<prompt example 1>"
 - "<prompt example 2>"
 
-Changelog: 
-Owner:
-Last Reviewed:
+**Last Reviewed:** yyyy-mm-dd HH:mm UTC by [<full name>](mailto:<email_address>)
+
+**Changelog:**
+- yyyy-mm-dd HH:mm UTC [<full name>](mailto:<email_address>): <description>
+- yyyy-mm-dd HH:mm UTC [<full name>](mailto:<email_address>): <description>
+
+**Owner:** [<full name>](mailto:<email_address>)
+
 
 # Relevant Context
 
@@ -171,60 +175,50 @@ Common human topic references mapped to canonical handles (i.e., IDs and namespa
 
 ## Experts (General)
 
-ID: GPT.EXPERTS
-Canonical Tag: [[GPT:EXPERTS]]
-Aliases: [[GPT_EXPERTS]]
+**ID:** GPT.EXPERTS
+**Tag:** [[GPT:EXPERTS]]
+**Aliases:** [[GPT_EXPERTS]]
 
-**Summary:**
-Experts that most comprehensively and most frequently study, analyze, evaluate, refine, and apply ChatGPTs and custom GPTs (e.g., use cases, features, prompts, results). 
+**Summary:** Experts that most comprehensively and most frequently study, analyze, evaluate, refine, and apply ChatGPTs and custom GPTs (e.g., use cases, features, prompts, results). 
 
 **Included Roles:**
-
-* **Product, Strategy, and Applied Use Experts**
-
-  * Prompt Engineers
-  * AI Product Managers
-  * Technical Product Managers
-  * Applied AI Specialists / Solutions Architects
-* **Data, Training, and Optimization Experts**
-
-  * Data Scientists
-  * Data Engineers
-  * Training Infrastructure Engineers
-* **AI Research and Model Development Experts**
-
-  * Artificial Intelligence Researchers
-  * Machine Learning Scientists
-  * Computational Linguists
-  * Applied Research Scientists
-* **Governance, Safety, and Ethics Experts**
-
-  * AI Safety Researchers
-  * Responsible AI Specialists
-  * AI Ethicists
-  * Trust and Safety Analysts
-* **Business, Workforce, and Organizational Experts**
-
-  * Management Scientists
-  * Industrial-Organizational Psychologists
-  * Workforce Development Specialists
-* **Education, Enablement, and Knowledge Translation Experts**
-
-  * AI Trainers and Curriculum Developers
-  * Technical Evangelists / Developer Advocates
-  * Instructional Designers
-* **AI Engineering and Systems Implementation Experts**
-
-  * Machine Learning Engineers
-  * AI Engineers
-  * Software Engineers
-  * MLOps Engineers
-* **Human-Centered and Evaluation Experts**
-
-  * AI Evaluation Scientists
-  * Human-Computer Interaction Researchers
-  * UX Researchers
-  * Cognitive Scientists 
+- **Product, Strategy, and Applied Use Experts**
+  - Prompt Engineers
+  - AI Product Managers
+  - Technical Product Managers
+  - Applied AI Specialists / Solutions Architects
+- **Data, Training, and Optimization Experts**
+  - Data Scientists
+  - Data Engineers
+  - Training Infrastructure Engineers
+- **AI Research and Model Development Experts**
+  - Artificial Intelligence Researchers
+  - Machine Learning Scientists
+  - Computational Linguists
+  - Applied Research Scientists
+- **Governance, Safety, and Ethics Experts**
+  - AI Safety Researchers
+  - Responsible AI Specialists
+  - AI Ethicists
+  - Trust and Safety Analysts
+- **Business, Workforce, and Organizational Experts**
+  - Management Scientists
+  - Industrial-Organizational Psychologists
+  - Workforce Development Specialists
+- **Education, Enablement, and Knowledge Translation Experts**
+  - AI Trainers and Curriculum Developers
+  - Technical Evangelists / Developer Advocates
+  - Instructional Designers
+- **AI Engineering and Systems Implementation Experts**
+  - Machine Learning Engineers
+  - AI Engineers
+  - Software Engineers
+  - MLOps Engineers
+- **Human-Centered and Evaluation Experts**
+  - AI Evaluation Scientists
+  - Human-Computer Interaction Researchers
+  - UX Researchers
+  - Cognitive Scientists 
 
 **Requires:** None
 **Compatible With:** [[GPT:KNOWLEDGE_EXPERTS]] (as a specialization when focusing on knowledge files)
@@ -232,44 +226,40 @@ Experts that most comprehensively and most frequently study, analyze, evaluate, 
 **Overlaps With:** None
 
 **Best For (Use Cases):**
-
-* Multi-lens evaluation of ChatGPT/custom GPT behavior and outputs
-* Reviewing prompt strategies, product fit, safety/risk considerations, and implementation feasibility
-* Structured critiques that benefit from multiple perspectives (product + engineering + governance + human factors)
+- Multi-lens evaluation of ChatGPT/custom GPT behavior and outputs
+- Reviewing prompt strategies, product fit, safety/risk considerations, and implementation feasibility
+- Structured critiques that benefit from multiple perspectives (product + engineering + governance + human factors)
 
 **Not For (Anti-Use Cases):**
-
-* Credential verification of real people
-* Domain-specific professional advice outside the “review lens” framing (e.g., legal/medical determinations)
+- Credential verification of real people
+- Domain-specific professional advice outside the “review lens” framing (e.g., legal/medical determinations)
 
 **Inputs Expected:**
-
-* User goal (what to evaluate or build)
-* Relevant artifacts (prompt, instructions, outputs, constraints)
+- User goal (what to evaluate or build)
+- Relevant artifacts (prompt, instructions, outputs, constraints)
 
 **Outputs (Default Deliverables):**
-
-* A role-structured review (findings → risks → recommendations → next steps)
-* Practical, actionable changes (prompt edits, instruction revisions, evaluation checks)
+- A role-structured review (findings → risks → recommendations → next steps)
+- Practical, actionable changes (prompt edits, instruction revisions, evaluation checks)
 
 **Quality Bar / Evaluation Criteria:**
-
-* Clear, specific, non-overlapping lenses
-* Actionable recommendations (what to change + why)
-* Notes on trade-offs (accuracy vs usability, safety vs helpfulness)
+- Clear, specific, non-overlapping lenses
+- Actionable recommendations (what to change + why)
+- Notes on trade-offs (accuracy vs usability, safety vs helpfulness)
 
 **Safety / Compliance Notes:**
-
-* Follow applicable safety and policy constraints; flag uncertain claims and suggest verification steps.
+- Follow applicable safety and policy constraints; flag uncertain claims and suggest verification steps.
 
 **Examples:**
+- “Use [[GPT:EXPERTS]] to evaluate this custom GPT’s instructions and propose improvements for clarity, safety, and usability.”
+- “Act as [[GPT:EXPERTS]] and provide a multi-lens critique of these prompt results, including evaluation suggestions.”
 
-* “Use [[GPT:EXPERTS]] to evaluate this custom GPT’s instructions and propose improvements for clarity, safety, and usability.”
-* “Act as [[GPT:EXPERTS]] and provide a multi-lens critique of these prompt results, including evaluation suggestions.”
+**Last Reviewed:** 2026-02-04 07:08 UTC by Lance Hegland
 
-**Changelog:** None
+**Changelog:**
+- 2026-02-04 07:08 UTC by Lance Hegland: cleanup typos and formatting inconsistencies
+
 **Owner:** Lance Hegland (lance.hegland@gmail.com)
-**Last reviewed:** 2026-02-02 06:02 UTC by Lance Hegland
 
 
 ## Knowledge Experts
@@ -282,65 +272,57 @@ Aliases: [[GPT_KNOWLEDGE_EXPERTS]]
 Experts that most comprehensively and most frequently study, analyze, evaluate, refine, and apply knowledge files uploaded to ChatGPT and custom GPTs (e.g., instructions, roles, knowledge, capabilities, policies). 
 
 **Included Roles:**
+- **Data, Knowledge, and Information Management Experts**
+  - Knowledge Engineers
+  - Information Architects
+- **AI Model Development Experts**
+  - AI Research Scientists
+  - Applied Machine Learning Scientists
+  - NLP Scientists
+- **Governance, Risk, and Quality Experts**
+  - Model Risk Management Analysts
+  - Compliance and Privacy Analysts 
 
-* **Data, Knowledge, and Information Management Experts**
-
-  * Knowledge Engineers
-  * Information Architects
-* **AI Model Development Experts**
-
-  * AI Research Scientists
-  * Applied Machine Learning Scientists
-  * NLP Scientists
-* **Governance, Risk, and Quality Experts**
-
-  * Model Risk Management Analysts
-  * Compliance and Privacy Analysts 
-
-**Requires:** [[GPT:EXPERTS]] (must be used with the general expert set)
-**Compatible With:** [[GPT:EXPERTS]] (required)
+**Requires:** [[GPT:EXPERTS]]
+**Compatible With:** [[GPT:EXPERTS]]
 **Conflicts With:** None
 **Overlaps With:** None
 
 **Best For (Use Cases):**
-
-* Evaluating knowledge files for structure, retrieval ergonomics, and maintainability
-* Improving tags/IDs/indexing, scope boundaries, and “how to use” guidance
-* Identifying risks like ambiguity, duplication, drift, and missing constraints
-* Drafting schemas/policies for knowledge-file governance
+- Evaluating knowledge files for structure, retrieval ergonomics, and maintainability
+- Improving tags/IDs/indexing, scope boundaries, and “how to use” guidance
+- Identifying risks like ambiguity, duplication, drift, and missing constraints
+- Drafting schemas/policies for knowledge-file governance
 
 **Not For (Anti-Use Cases):**
-
-* Auditing factual truth of the world (unless sources are provided)
-* Replacing domain experts when the task is not about knowledge-file design
+- Auditing factual truth of the world (unless sources are provided)
+- Replacing domain experts when the task is not about knowledge-file design
 
 **Inputs Expected:**
-
-* The knowledge file content
-* The intended audience + tasks the file should support
-* Any constraints (tone, safety boundaries, formatting standards)
+- The knowledge file content
+- The intended audience + tasks the file should support
+- Any constraints (tone, safety boundaries, formatting standards)
 
 **Outputs (Default Deliverables):**
-
-* Findings (what works) + gaps (what’s missing)
-* Concrete edits (revised sections, improved tags/index entries)
-* Recommended maintenance rules (schema, lint checks, versioning/changelog)
+- Findings (what works) + gaps (what’s missing)
+- Concrete edits (revised sections, improved tags/index entries)
+- Recommended maintenance rules (schema, lint checks, versioning/changelog)
 
 **Quality Bar / Evaluation Criteria:**
-
-* Recommendations are directly tied to file sections and intended use
-* Changes improve retrieval, clarity, and consistency without bloating the file
-* Clear distinction between “must-have” vs “nice-to-have” improvements
+- Recommendations are directly tied to file sections and intended use
+- Changes improve retrieval, clarity, and consistency without bloating the file
+- Clear distinction between “must-have” vs “nice-to-have” improvements
 
 **Safety / Compliance Notes:**
-
-* Avoid implying credentialed professional authority; keep conclusions scoped to file design and prompt reliability.
+- Avoid implying credentialed professional authority; keep conclusions scoped to file design and prompt reliability.
 
 **Examples:**
+- “Use [[GPT:EXPERTS]] + [[GPT:KNOWLEDGE_EXPERTS]] to evaluate this knowledge file and rewrite the header, index, and definitions for better retrieval.”
+- “As [[GPT:EXPERTS]] + [[GPT:KNOWLEDGE_EXPERTS]], propose a tag policy and a contributor checklist for this knowledge set.”
 
-* “Use [[GPT:EXPERTS]] + [[GPT:KNOWLEDGE_EXPERTS]] to evaluate this knowledge file and rewrite the header, index, and definitions for better retrieval.”
-* “As [[GPT:EXPERTS]] + [[GPT:KNOWLEDGE_EXPERTS]], propose a tag policy and a contributor checklist for this knowledge set.”
+**Last Reviewed:** 2026-02-04 07:12 UTC by Lance Hegland
 
-**Changelog:** None
+**Changelog:**
+- 2026-02-04 07:12 UTC by Lance Hegland: cleanup typos and formatting inconsistencies
+
 **Owner:** Lance Hegland (lance.hegland@gmail.com)
-**Last reviewed:** 2026-02-02 06:02 UTC by Lance Hegland
