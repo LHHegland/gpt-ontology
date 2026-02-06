@@ -40,7 +40,7 @@ Bulleted list of common human topic references mapped to canonical handles (i.e.
 - Tag Governance Policies → KF_POLICIES.TAGS.GOVERNANCE → [[KF_POLICIES:TAG_GOVERNANCE]]
 - Schema → KF_POLICIES.SCHEMA → [[KF_POLICIES:SCHEMA]]
 - Required Fields → KF_POLICIES.SCHEMA.FIELDS.REQUIRED → [[KF_POLICIES:FIELDS_REQUIRED]]
-- Content Fields → KF_POLICIES.SCHEMA.FIELDS.CONTENT → [[KF_POLICIES:FIELDS_REQUIRED]]
+- Content Fields → KF_POLICIES.SCHEMA.FIELDS.CONTENT → [[KF_POLICIES:FIELDS_CONTENT]]
 - Relationship / Composition Fields → KF_POLICIES.SCHEMA.FIELDS.RELATIONSHIP → [[KF_POLICIES:FIELDS_RELATIONSHIP]]
 - GPT Prompt Use Examples Field → KF_POLICIES.SCHEMA.FIELDS.EXAMPLES → [[KF_POLICIES:FIELDS_EXAMPLES]]
 - Maintenance Metadata Fields → KF_POLICIES.SCHEMA.FIELDS.MAINTENANCE → [[KF_POLICIES:FIELDS_MAINTENANCE]]
@@ -65,6 +65,20 @@ The sections below identify **relevant context (knowledge)** entries for a commo
 **Tag:** [[KF_POLICIES:ROOT]]
 
 **Global knowledge file policies** are identified within the following sections. This domain is a subdomain of GPT.KNOWLEDGE.FILE.POLICIES
+
+
+#### GPT Knowledge File Types
+**ID:** KF_POLICIES.TYPES
+**Tag:** [[KF_POLICIES:TYPES]]
+
+**GPT Knowledge File Types** are identified as follows:
+- **Meta** applies throughout the GPT at all times, governing behavior across tasks, experts, domains, personas, and examples.
+- **Tasks** are defined as objectives with specific individual steps (workflows).
+Sometimes, the workflow can be performed by using the same **Expert** and the same **Domain** knowledge. Sometimes, one or more of the workflow's individual steps may be best performed using a different **Expert** and a different **Domain**. Sometimes, more complex **Tasks** may reuse the same workflow from less complex **Tasks**. In other words, **Tasks**, **Experts**, and **Domains** are independent and may be interchangeable. One or more workflow steps may be configured using a variety of distinct parameters, as follows:
+  - **Experts** (unique, independent, and reusable capability set)
+  - **Domains** (unique, independent, and reusable knowledge set)
+- **Personas** present results of **Tasks** using specified structures and specified styles. Usually, a **Task** is presented by a single **Persona** using a specified structure and specified style. Rarely, the results of one or more individual steps of a task might be presented using different styles or structures.
+
 
 
 #### Tag Policies
@@ -146,7 +160,7 @@ The sections below identify **relevant context (knowledge)** entries for a commo
 
 ##### Content Fields
 **ID:** KF_POLICIES.SCHEMA.FIELDS.CONTENT
-**Tag:** [[KF_POLICIES:FIELDS_REQUIRED]]
+**Tag:** [[KF_POLICIES:FIELDS_CONTENT]]
 
 **Content fields** for knowledge definition entries are as follows:
 - **Various Domain Specific Fields:** Field labels and values depend on content type, as follows:
