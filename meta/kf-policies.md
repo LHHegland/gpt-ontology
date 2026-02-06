@@ -33,6 +33,15 @@ See [[KF_POLICIES:ROOT]].
 ## Index
 Bulleted list of common human topic references mapped to canonical handles (i.e., IDs and namespaced tags). Use canonical tags (not tag aliases) in prompts (e.g., [[KF_POLICIES:NAMING_TAGS]]).
 - Global Knowledge File Policies → KF_POLICIES → [[KF_POLICIES:ROOT]]
+- Knowledge File Type Policies → KF_POLICIES.TYPES → [[KF_POLICIES:TYPES]]
+- General Knowledge File Type Rules → KF_POLICIES.TYPES.RULES → [[KF_POLICIES:TYPE_RULES]]
+- Meta Knowledge Files → KF_POLICIES.TYPES.META → [[KF_POLICIES:META_TYPES]]
+- Task Knowledge Files → KF_POLICIES.TYPES.TASK → [[KF_POLICIES:TASK_TYPES]]
+- Expert Knowledge Files → KF_POLICIES.TYPES.EXPERT → [[KF_POLICIES:EXPERT_TYPES]]
+- Domain Knowledge Files → KF_POLICIES.TYPES.DOMAIN → [[KF_POLICIES:DOMAIN_TYPES]]
+- Persona Knowledge Files → KF_POLICIES.TYPES.PERSONA → [[KF_POLICIES:PERSONA_TYPES]]
+- Structure Knowledge Files → KF_POLICIES.TYPES.STRUCTURE → [[KF_POLICIES:STRUCTURE_TYPES]]
+- Example Knowledge Files → KF_POLICIES.TYPES.EXAMPLE → [[KF_POLICIES:EXAMPLE_TYPES]]
 - Tag Policies → KF_POLICIES.TAGS → [[KF_POLICIES:TAGS]]
 - Canonical Tag Policies → KF_POLICIES.TAGS.CANONICAL → [[KF_POLICIES:TAGS_CANONICAL]]
 - Tag Alias Policies → KF_POLICIES.TAGS.ALIASES → [[KF_POLICIES:TAG_ALIASES]]
@@ -67,18 +76,127 @@ The sections below identify **relevant context (knowledge)** entries for a commo
 **Global knowledge file policies** are identified within the following sections. This domain is a subdomain of GPT.KNOWLEDGE.FILE.POLICIES
 
 
-#### GPT Knowledge File Types
+#### Knowledge File Type Policies
 **ID:** KF_POLICIES.TYPES
 **Tag:** [[KF_POLICIES:TYPES]]
 
-**GPT Knowledge File Types** are identified as follows:
-- **Meta** applies throughout the GPT at all times, governing behavior across tasks, experts, domains, personas, and examples.
-- **Tasks** are defined as objectives with specific individual steps (workflows).
-Sometimes, the workflow can be performed by using the same **Expert** and the same **Domain** knowledge. Sometimes, one or more of the workflow's individual steps may be best performed using a different **Expert** and a different **Domain**. Sometimes, more complex **Tasks** may reuse the same workflow from less complex **Tasks**. In other words, **Tasks**, **Experts**, and **Domains** are independent and may be interchangeable. One or more workflow steps may be configured using a variety of distinct parameters, as follows:
-  - **Experts** (unique, independent, and reusable capability set)
-  - **Domains** (unique, independent, and reusable knowledge set)
-- **Personas** present results of **Tasks** using specified structures and specified styles. Usually, a **Task** is presented by a single **Persona** using a specified structure and specified style. Rarely, the results of one or more individual steps of a task might be presented using different styles or structures.
+**Knowledge File Type Policies** are identified within the following sections. Use distinct knowledge file types to separate concerns, improve accuracy, and enable reuse. Each file type has a specific purpose, appropriate use cases, and minimal required sections.
 
+
+#### General Knowledge File Type Rules
+**ID:** KF_POLICIES.TYPES.RULES
+**Tag:** [[KF_POLICIES:TYPE_RULES]]
+
+**General Knowledge File Type Rules** are as follows:
+- Each knowledge file MUST belong to exactly one type.
+- File types MUST NOT be merged.
+- Meta rules apply to all file types.
+- Examples illustrate behavior; they do not define rules.
+
+
+##### Meta Knowledge Files
+**ID:** KF_POLICIES.TYPES.META
+**Tag:** [[KF_POLICIES:META_TYPES]]
+
+**Meta Knowledge Files** define global identity, behavioral rules, governance, and conflict resolution.
+
+**When to Use:** Always. Meta files apply across the GPT at all times and govern all other knowledge files.
+
+**Minimal Required Sections:**
+- Purpose and Scope
+- Global Behavioral Rules and Priorities
+- Conflict-Resolution Hierarchy
+- Governance (versioning, ownership, review cadence)
+
+
+##### Task Knowledge Files
+**ID:** KF_POLICIES.TYPES.TASK
+**Tag:** [[KF_POLICIES:TASK_TYPES]]
+
+**Task Knowledge Files** define objectives and the workflows (ordered steps) used to achieve them.
+
+**When to Use:** When GPT must accomplish a specific goal or repeatable process.
+
+**Minimal Required Sections:**
+- Objective
+- Workflow Steps
+- Inputs and Outputs
+- Assumptions and Constraints
+- Success Criteria
+
+
+##### Expert Knowledge Files
+**ID:** KF_POLICIES.TYPES.EXPERT
+**Tag:** [[KF_POLICIES:EXPERT_TYPES]]
+
+**Expert Knowledge Files** define reasoning style, judgment norms, scope, and limitations.
+
+**When to Use:** When tasks require specialized judgment, reasoning discipline, or professional norms.
+
+**Minimal Required Sections:**
+- Expertise Scope
+- Reasoning Approach and Priorities
+- In-scope and Out-of-scope Areas
+- Known Limitations or Cautions
+
+
+##### Domain Knowledge Files
+**ID:** KF_POLICIES.TYPES.DOMAIN
+**Tag:** [[KF_POLICIES:DOMAIN_TYPES]]
+
+**Domain Knowledge Files** provide factual context, definitions, assumptions, and constraints for a subject area.
+
+**When to Use:** When accuracy depends on domain-specific knowledge.
+
+**Minimal Required Sections:**
+- Domain Description
+- Core Concepts and Definitions
+- Assumptions and Constraints
+- Terminology or Reference Standards
+
+
+##### Persona Knowledge Files
+**ID:** KF_POLICIES.TYPES.PERSONA
+**Tag:** [[KF_POLICIES:PERSONA_TYPES]]
+
+**Persona Knowledge Files** control how results are communicated (tone, structure, style).
+**When to Use:** When presentation, audience alignment, or consistency of communication matters.
+
+Minimal Required Sections:
+- Intended Audience
+- Communication Style and Tone
+- Structural or Formatting Expectations
+- Explicit Exclusions (what the persona does not do)
+
+
+##### Structure Knowledge Files
+**ID:** KF_POLICIES.TYPES.STRUCTURE
+**Tag:** [[KF_POLICIES:STRUCTURE_TYPES]]
+
+**Structure Knowledge Files** define reusable output formats or organizational patterns independent of content.
+
+**When to Use**: When outputs must follow a consistent structure across tasks or personas.
+
+**Minimal Required Sections:**
+- Structure Name and Purpose
+- Required Sections or Fields
+- Ordering Rules
+- Formatting Constraints
+
+
+##### Example Knowledge Files
+**ID:** KF_POLICIES.TYPES.EXAMPLE
+**Tag:** [[KF_POLICIES:EXAMPLE_TYPES]]
+
+**Example Knowledge Files** capture high-quality prompt–output pairs that demonstrate desired outcomes.
+
+**When to Use:** When behavior, style, or judgment is best conveyed by demonstration.
+
+**Minimal Required Sections:**
+- Context (referenced meta, task, expert, domain, persona, structure)
+- Prompt
+- Output
+- Rationale (why this is a good example)
 
 
 #### Tag Policies
